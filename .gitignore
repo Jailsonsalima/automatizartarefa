@@ -10,6 +10,4 @@
 # Arquivos de segredos (vamos ver isso depois)
 #.env
 
-# Configurações do Django
 
-core/settings.py
