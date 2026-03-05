@@ -1,0 +1,128 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f4f6f9, #e9ecef);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container central */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+    overflow-x: auto; /* evita que a tabela estoure */
+
+}
+
+/* Títulos */
+h2, h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Labels e inputs */
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #444;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Botões */
+button {
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="reset"] {
+    background-color: #ff9800;
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button[type="reset"]:hover {
+    background-color: #e68900;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse:collapse;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}

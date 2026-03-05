@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Python PowerUp</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <div class="container">
+
+    <h2>Sistema Python PowerUp</h2>
+    <p>Faça seu Login para acessar</p>
+    <form method="post">
+        {% csrf_token %}
+        <label>E-mail</label>
+        <input type="text" name="email" required><br>
+        <label>Senha</label>
+        <input type="password" name="senha" required><br>
+        <button type="submit">Logar</button>
+    </form>
+    </div>
+</body>
+</html>

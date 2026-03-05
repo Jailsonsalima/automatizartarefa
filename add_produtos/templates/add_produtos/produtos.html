@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Produtos</title>
+    <!-- Estilos -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+</head>
+<body>
+    <div class="container">
+
+    <h2>Formulário de Cadastro de Produtos</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label>Código do Produto</label>
+        <input type="text" name="codigo"><br>
+        <label>Marca do Produto</label>
+        <input type="text" name="marca"><br>
+        <label>Tipo do Produto</label>
+        <input type="text" name="tipo"><br>
+        <label>Categoria do Produto</label>
+        <input type="text" name="categoria"><br>
+        <label>Preço Unitário</label>
+        <input type="text" name="preco"><br>
+        <label>Custo do Produto</label>
+        <input type="text" name="custo"><br>
+        <label>OBS</label>
+        <input type="text" name="obs"><br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+
+    <h3>Produtos Cadastrados</h3>
+    <table border="1">
+        <tr>
+            <th>Código</th><th>Marca</th><th>Tipo</th><th>Categoria</th>
+            <th>Preço Un.</th><th>Custo</th><th>OBS</th>
+        </tr>
+        {% for produto in produtos %}
+        <tr>
+            <td>{{ produto.codigo }}</td>
+            <td>{{ produto.marca }}</td>
+            <td>{{ produto.tipo }}</td>
+            <td>{{ produto.categoria }}</td>
+            <td>{{ produto.preco }}</td>
+            <td>{{ produto.custo }}</td>
+            <td>{{ produto.obs }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+</body>
+</html>
